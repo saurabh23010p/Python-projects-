@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <h1>Weather Forecast Dashboard</h1>
+    <form method="POST">
+        <input type="text" name="city" placeholder="Enter city name" required>
+        <button type="submit">Get Forecast</button>
+    </form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    {% if image_file %}
+        <h2>Forecast Chart:</h2>
+        <img src="{{ image_file }}" alt="Forecast Chart">
+    {% endif %}
+</body>
+</html>
